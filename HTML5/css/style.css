@@ -366,7 +366,7 @@ body {
   display: block;
   background: url("images/validation_icon.png") no-repeat 15px 50%,
               linear-gradient(to bottom, #ccc, #eee);
-  border: 1px solid #aaa;
+  border: 1px solid #000;
   border-radius: 30px;
   padding: 10px 5px 8px 45px;
 }

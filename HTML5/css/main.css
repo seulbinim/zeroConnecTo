@@ -384,10 +384,10 @@ body{
 .validation-list a{
   padding: 8px 0;
   text-indent: 45px;
-  border: 1px solid #aaa;
+  border: 1px solid #000;
   border-radius: 50px;
   background: url(./images/validation_icon.png) no-repeat 15px 50% /18px 18px, 
-  linear-gradient(to bottom, #ccc, #eee);
+  linear-gradient(to bottom, #999, #666);
   display: block;
 }
 
