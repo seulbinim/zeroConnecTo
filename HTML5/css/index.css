@@ -39,6 +39,25 @@ body{
   font-size: 1.4rem;
 }
 
+/* 스킵 내비게이션 */
+/* .skip-nav{
+} */
+
+.skip-nav a{
+  padding: 4px 0;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+}
+
+.skip-nav a:focus{
+  display: block;
+}
+
+
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
@@ -616,7 +635,7 @@ body{
   border-bottom: 1px solid #aaa;
 }
 
-.event-title, .related-title{
+.event-title, .related-title, .favorite-title{
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -705,15 +724,72 @@ body{
   padding: 10px 0;
 }
 
-
-
-
 .related-list a{
   display: block;
   line-height: 25px;
   padding: 0 0 0 20px;
 }
 
+/* 인기사이트 */
+.favorite{
+  position: relative;
+  margin-top: 20px;
+}
+
+.favorite-list{
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.favorite-list li{
+  position: relative;
+  margin-top: 8px;
+  counter-increment: number;
+}
+
+.favorite-list li::before{
+  content: counter(number);
+  display: inline-flex;
+  padding: 2px 5px 1px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #aaa;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: center;
+  margin-right: 0.5em;
+}
+
+.favorite-list a{
+  vertical-align: middle;
+}
+
+.favorite-list em{
+  position: absolute;
+  width: 9px;
+  height: 11px;
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  background-image: url(./images/rank.png);
+  background-repeat: no-repeat;
+}
+
+.favorite-list .stop{
+  background-position: 0 50%;
+}
+
+.favorite-list .down{
+  background-position: 0 100%;
+}
+
+
+.favorite-more{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
 
 /* 슬로건 */
 .slogan{
