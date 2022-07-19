@@ -43,12 +43,13 @@ body{
 /* 스킵 내비게이션 */
 .skip-nav{
   position: absolute;
-  text-align: center;
   width: 100%;
+  text-align: center;
   padding: 4px 0;
   transform: translateY(-110%);
   background: #000;
   color: #fff;
+  z-index: 10;
 }
 
 .skip-nav span{
@@ -61,7 +62,6 @@ body{
 .skip-nav:focus{
   outline: 0;
   transform: none;
-  z-index: 10;
 }
 
 /* 레이아웃 */
