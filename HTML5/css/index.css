@@ -616,7 +616,7 @@ body{
   border-bottom: 1px solid #aaa;
 }
 
-.event-title{
+.event-title, .related-title{
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -649,7 +649,6 @@ body{
 
 .event-button-container{
   padding: 4px;
-
   margin-left: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -686,6 +685,35 @@ body{
   border: 1px solid #aaa;
   box-shadow: 5px 5px 0 0 #bbb;
 }
+
+.related{
+  padding-top: 10px;
+}
+
+.related-list{
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms, padding 400ms 400ms;
+}
+
+.related-list:hover, .related-list:focus{
+  height: 147px;
+  padding: 10px 0;
+}
+
+
+
+
+.related-list a{
+  display: block;
+  line-height: 25px;
+  padding: 0 0 0 20px;
+}
+
 
 /* 슬로건 */
 .slogan{
