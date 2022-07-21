@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  padding: var(--spacing-base) var(--spacing-md);
+  padding: var(--spacing-base) var(--spacing-lg);
   gap: var(--spacing-base);
 }
 
@@ -97,6 +97,71 @@ input[type="search"]{
   font-weight: 700;
 }
 
+/* 공통 메인 콘텐츠 */
+.appMain{
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* 공통 메인 콘텐츠 섹션 제목 */
+
+.appMain [class*="__title"]{
+  margin-bottom: var(--spacing-base);
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+
+.appMain [class*="__enTitle"]{
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+.sprite{
+  min-height: 3.75rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-image: url(./../images/sprite_main.png);
+  background-repeat: no-repeat;
+}
+
+.spriteBook{
+  background-position: 0 0;
+}
+
+.spriteNews{
+  background-position: 0 -230px;
+}
+
+.spriteBoard{
+  background-position: 0 -115px;
+}
+
+.spriteFavorite{
+  background-position: 0 -345px;
+}
+
+.spriteTwitter{
+  background-position: 0 -460px;
+}
+
+.accentBook{
+  color: var(--accent-book);
+}
+.accentNews{
+  color: var(--accent-news);
+}
+.accentBoard{
+  color: var(--accent-board);
+}
+.accentFavorite{
+  color: var(--accent-favorite);
+}
+.accentTwitter{
+  color: var(--accent-twitter);
+}
+
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 767px){
   /* 모바일 헤더 */
@@ -122,7 +187,7 @@ input[type="search"]{
     overflow: hidden;
     position: absolute;
     top: 3.75rem; 
-    right: var(--spacing-md);
+    right: var(--spacing-lg);
     transform: translate(0.25rem, -0.25rem;)
   }
 
@@ -185,7 +250,7 @@ input[type="search"]{
     width: 70%;
     height: 100vh;
     backdrop-filter: blur(4px);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transform: translateX(-150%);
     transition: all 300ms;
   }
@@ -232,7 +297,7 @@ input[type="search"]{
   /* 데스크탑 메인 메뉴 */
   .menu{
     background: var(--secondary-color);
-    padding: var(--spacing-base) var(--spacing-md);
+    padding: var(--spacing-base) var(--spacing-lg);
   }
 
   .menu__list{
@@ -249,6 +314,14 @@ input[type="search"]{
   .menu__link{
     color: var(--white);
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
+
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain{
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffc;
   }
 }
 
