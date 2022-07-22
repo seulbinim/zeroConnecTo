@@ -291,6 +291,18 @@ input[type="search"]{
   display: block;
   margin-top: var(--spacing-xs);
 }
+
+/* 공통 푸터 */
+.appFooter{
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.address{
+  margin-bottom: var(--spacing-base);
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 767px){
   /* 모바일 헤더 */
@@ -316,7 +328,7 @@ input[type="search"]{
     position: absolute;
     top: 3.75rem; 
     right: var(--spacing-lg);
-    background: darkblue;
+    padding: 0.25rem;
   }
   .button--burger{
     width: 2rem;
@@ -325,18 +337,22 @@ input[type="search"]{
     flex-flow: column nowrap;
     justify-content: space-between;
   }
+
+  .button--burger:focus{
+    outline-offset: 2px;
+  }
+
   .button--burgerBarTop,
   .button--burgerBarMiddle,
   .button--burgerBarBottom{
     width: 100%;
     height: 20%;
-    background: #fff;
+    background: var(--white);
     border-radius: 20px;
     transition: all 350ms;
   }
 
   .is--active .button--burgerBarTop{
-    background: yellow;
     position: relative;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
@@ -347,7 +363,6 @@ input[type="search"]{
   }
 
   .is--active .button--burgerBarBottom{
-    background: pink;
     position: relative;
     top: -50%;
     transform: translateY(50%) rotate(-45deg);
@@ -442,7 +457,42 @@ input[type="search"]{
     color: var(--accent-favorite);
     font-size: var(--text-sm);
   }
+  /* 모바일 메인 콘텐츠 */
+  .appMain{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: var(--spacing-base);
+  }
+
+  .book, .news, .board, .favorite, .twitter{
+    width: 100%;
+  }
+
+  /* 모바일 푸터 */
+  .address{
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
+
+/* 모바일 Medium Size (640px 이상) */
+@media (min-width: 640px) and (max-width: 767px){
+  /* 모바일(MD) 메인콘텐츠 */
+  .book{
+    order: 1;
+  }
+
+  .news{
+    order: -1;
+  }
+
+  .book, .board, .favorite, .twitter{
+    width: 48%;
+  }
+
+}
+
 
 /* 데스크탑 디바이스 (Desktop Device) */
 @media (min-width: 768px){
@@ -501,13 +551,44 @@ input[type="search"]{
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    background: #ffc;
   }
 
   /* 데스크탑 트위터 */
   .twitter__userProfile{
     width: 100px;
     height: 100px;
+  }
+
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "news news news news news news news news news news news news"
+                         "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+                         "book book book book . board board board board board board board";
+    gap: var(--spacing-base);
+  }
+
+  .book{
+    grid-area: book;
+  }
+  .news{
+    grid-area: news;
+  }
+  .board{
+    grid-area: board;
+  }
+  .favorite{
+    grid-area: favorite;
+  }
+  .twitter{
+    grid-area: twitter;
+  }
+
+  /* 데스크탑 푸터 */
+  .appFooter{
+    text-align: center;
   }
 }
 
