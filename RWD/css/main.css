@@ -357,14 +357,21 @@ iframe{
   }
 
   /* 모바일 메인 콘텐츠 섹션 */
-  .appMain{
+  /* .appMain{
     padding: 0 1.5rem;
   }
 
   .appMain > section, .appMain article{
     margin-top: 1.5rem;
-  }
+  } */
 
+  .appMain{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .book, .news, .board, .favorite, .twitter{
+    width: 100%;
+  } 
   /* 모바일 인기사이트 */
   .favorite__link::after{
     content: attr(data-tooltip);
@@ -375,6 +382,12 @@ iframe{
   .address{
     display: flex;
     flex-flow: column nowrap; 
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px){
+  .board, .favorite{
+    width: 50%;
   }
 }
 

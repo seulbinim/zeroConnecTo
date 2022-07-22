@@ -628,3 +628,23 @@ button{
         -ms-grid-column-span:9
     }
 }
+
+@media (min-width: 640px) and (max-width: 767px){
+    .appMain{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      .book, .news, .board, .favorite, .twitter{
+        width: 100%;
+      }
+      .news{
+        order: -1;
+      }
+    .book, .board, .favorite, .twitter{
+      width: 45%;
+    }
+    .book{
+        order: 1;
+    }
+  }
